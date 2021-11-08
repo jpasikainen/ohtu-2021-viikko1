@@ -5,12 +5,8 @@ class Varasto:
             self.tilavuus = tilavuus
 
         self.saldo = 0.0
-        if alku_saldo <= tilavuus:
-            # mahtuu
-            self.saldo = alku_saldo
-        else:
-            # täyteen ja ylimäärä hukkaan!
-            self.saldo = tilavuus
+        if alku_saldo > 0:
+            self.saldo = min(alku_saldo, tilavuus)
 
     # huom: ominaisuus voidaan myös laskea. Ei tarvita erillistä kenttää viela_tilaa tms.
     def paljonko_mahtuu(self):
