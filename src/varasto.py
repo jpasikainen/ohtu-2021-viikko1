@@ -4,7 +4,7 @@ class Varasto:
         if tilavuus > 0.0:
             self.tilavuus = tilavuus
 
-        self.saldo = 0.0
+        self.saldo = 0
         if alku_saldo > 0:
             self.saldo = min(alku_saldo, tilavuus)
 
